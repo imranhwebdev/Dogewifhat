@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+html, html body{
+    overflow-x: hidden;
+}
+  
+@font-face {
+    font-family: 'Helsinki';
+    src: url('../fonts/helsinki.ttf');
+    src: local('☺'),  
+         url('../fonts/helsinki.ttf') format('truetype'), 
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+div::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $primary;
+    border-radius: 20px;
+}
+div::-webkit-scrollbar-thumb {
+    background: $primary;
+}
+  
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    background-color: #17151E;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+    font-family: 'Helsinki';
+};
+
+h2{
+    @include font-43
+}
+p {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none !important;
+    @include transition;
+}
+
+input,
+textarea,
+button {
+    padding: 10px 25px;
+    outline: none;
+    @include transition;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+    border-color: #f3f3f3;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+    @include transition;
+}
+
+
+/*Hide number spin button*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.container {
+   max-width: 1290px;
+}
+
+.base {
+    &-btn {
+        display: inline-block;
+        border: 1px solid $primary;
+        border-radius: 5px;
+        padding: 23px 48px;
+        @include font-18;
+        @include sm {
+            font-size: 18px;
+        }
+        &:hover {
+            background-color: transparent;
+            color: $primary;
+        }
+        &.bg-transparent {
+            color: $primary;
+            &:hover {
+                background-color: $primary !important;
+            }
+        }
+    }
+    &-padding {
+        padding-top: 200px;
+        @include sm{
+            padding-top: 100px;
+        }
+    }
+    &-title {
+        & h2 {
+            @include font-43;
+            margin-bottom: 26px;
+            line-height: 130%;
+        }
+        & p {
+            @include font-18;
+        }
+    }
+}
+
+.-mb {
+    &-30 {
+        margin-bottom: -30px;
+    }
+}
+
+.seemore {
+    margin-top: 60px;
+    @include sm {
+        margin-top: 40px;
+    }
+}
+sub{
+    bottom: 0;
+}
