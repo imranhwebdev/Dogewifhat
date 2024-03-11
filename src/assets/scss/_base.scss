@@ -1,36 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-html, html body{
+html,
+html body {
     overflow-x: hidden;
 }
-  
-@font-face {
-    font-family: 'Helsinki';
-    src: url('../fonts/helsinki.ttf');
-    src: local('☺'),  
-         url('../fonts/helsinki.ttf') format('truetype'), 
-}
 
-::-webkit-scrollbar {
-    width: 8px;
-}
-div::-webkit-scrollbar {
-    width: 4px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: $primary;
-    border-radius: 20px;
-}
-div::-webkit-scrollbar-thumb {
-    background: $primary;
-}
-  
+// ::-webkit-scrollbar {
+//     width: 8px;
+// }
+// div::-webkit-scrollbar {
+//     width: 4px;
+// }
+// ::-webkit-scrollbar-thumb {
+//     background: $primary;
+//     border-radius: 20px;
+// }
+// div::-webkit-scrollbar-thumb {
+//     background: $primary;
+// }
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: $font-1;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.6;
-    background-color: #17151E;
+    color: rgba($color: $white, $alpha: .70);
+    background-color: $bg;
 }
 
 h1,
@@ -39,13 +31,11 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 400;
-    font-family: 'Helsinki';
-};
-
-h2{
-    @include font-43
+    font-weight: 600;
+    font-family: $font-2;
+    color: $white;
 }
+
 p {
     margin: 0;
 }
@@ -73,13 +63,10 @@ button {
     padding: 10px 25px;
     outline: none;
     @include transition;
-}
-
-input:focus,
-textarea:focus,
-button:focus {
-    outline: none;
-    border-color: #f3f3f3;
+    &:focus {
+        outline: none;
+        border-color: rgba($color: $white, $alpha: .10);
+    }
 }
 
 nav ul li {
@@ -98,7 +85,7 @@ input::-webkit-inner-spin-button {
 }
 
 .container {
-   max-width: 1290px;
+    max-width: 1290px;
 }
 
 .base {
@@ -124,7 +111,7 @@ input::-webkit-inner-spin-button {
     }
     &-padding {
         padding-top: 200px;
-        @include sm{
+        @include sm {
             padding-top: 100px;
         }
     }
@@ -152,6 +139,7 @@ input::-webkit-inner-spin-button {
         margin-top: 40px;
     }
 }
-sub{
+
+sub {
     bottom: 0;
 }
