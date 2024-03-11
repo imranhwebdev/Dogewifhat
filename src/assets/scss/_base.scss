@@ -133,13 +133,50 @@ input::-webkit-inner-spin-button {
     }
 }
 
-.seemore {
-    margin-top: 60px;
-    @include sm {
-        margin-top: 40px;
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    @include font-20;
+    color: $secondary;
+    --primary-color: #F9C36A;
+    --bs-btn-font-weight: 600;
+    --bs-btn-padding-x: 70px;
+    --bs-btn-padding-y: 15px;
+    --bs-btn-font-family: 'Poppins', sans-serif;
+    --bs-btn-border-width: 1px;
+    --bs-btn-hover-border-color: var(--primary-color);
+    --bs-btn-bg: var(--primary-color);
+    --bs-btn-hover-bg: transparent;
+    --bs-btn-border-radius: 100px;
+    &:hover {
+        color: $primary;
     }
 }
 
 sub {
     bottom: 0;
+}
+
+.social {
+    &-icon {
+        border-radius: 100px;
+        border: 2px solid $primary;
+        background-color: rgba($color: $primary, $alpha: .10);
+        padding: 10px 10px;
+        & a {
+            @include flex;
+            justify-content: center;
+            color: $primary;
+            flex: 0 0 auto;
+            font-size: 20px;
+            padding: 0 10px;
+            @include mmd {
+                font-size: 18px;
+            }
+            &:hover {
+                color: $white;
+            }
+        }
+    }
 }

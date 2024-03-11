@@ -1,13 +1,11 @@
 .heading {
-    padding: 30px 0;
-    position: absolute;
+    --padding-y: 24px;
+    padding: var(--padding-y) 0;
+    // position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 9;
-    @include sm {
-        padding-top: 15px;
-    }
     @include mmd {
         .navbar-toggler {
             background: #fff;
@@ -19,7 +17,7 @@
             & .navbar-nav {
                 & a {
                     border-bottom: 1px solid #f3f3f321;
-                    padding:15px 0px;
+                    padding: 15px 0px;
                 }
             }
         }
@@ -30,33 +28,37 @@
             }
         }
     }
-    & .navbar-brand{
+    @include sm {
+        --padding-y: 20px;
+    }
+    & .navbar-brand {
         max-width: 186px;
     }
-    & .base-btn{
+    & .base-btn {
         color: $white;
         font-size: 18px;
         font-weight: 700;
         padding: 16px 48px;
         line-height: 27px;
-        &:hover{
+        &:hover {
             background: $primary;
             color: #fff !important;
         }
-        @include mmd{
+        @include mmd {
             display: inline-block;
             margin-top: 20px;
         }
     }
 }
 
-.navbar-nav  {
+.navbar-nav {
     a {
         display: block;
-        color: $white !important;
-        font-size: 18px;
-        padding:5px 20px;
-        text-transform: capitalize;
+        color: rgba($color: $white, $alpha: .60) !important;
+        font-size: 16px;
+        padding: 5px 16px;
+        font-weight: 500;
+        text-transform: uppercase;
         cursor: pointer;
         &:hover,
         &.active,
@@ -64,11 +66,10 @@
             color: $primary !important;
         }
     }
-    
-    
 }
-.heading{
-    &.fixed{
+
+.heading {
+    &.fixed {
         position: fixed;
         background-color: $black;
         transition: all .3s ease-in-out;

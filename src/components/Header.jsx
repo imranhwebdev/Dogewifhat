@@ -1,8 +1,9 @@
-import { React, useState } from 'react'
+import { useState } from 'react'
 import {Container} from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from '../assets/img/sitelogo.svg';
+
 import { Link, animateScroll as scroll} from 'react-scroll';
 import { FaTwitter, FaPaperPlane} from "react-icons/fa";
 
@@ -30,7 +31,7 @@ export default function Header(){
                         <Link to="services" spy={true} smooth={true} offset={50} duration={500} >BUY WIF US</Link>
                         <Link to="contact" spy={true} smooth={true} offset={50} duration={500} >CHART US</Link>
                     </Nav>
-                    <div className="social">
+                    <div className="social-icon d-flex align-items-center flex-wrap justify-content-center">
                         <a href="/"><FaPaperPlane /></a>
                         <a href="/"><FaTwitter /></a>
                     </div>

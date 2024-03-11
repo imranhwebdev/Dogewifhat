@@ -1,18 +1,55 @@
-.footer{
-    .footer-logo{
+.footer {
+    background-image: url(../img/footer-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba($color: #191F24, $alpha: .30);
+    background-blend-mode: multiply;
+    &::before {
+        content: "";
+        width: 830px;
+        height: 500px;
+        border-radius: 100%;
+        background-color: rgba($color: $primary, $alpha: .32);
+        filter: blur(350px);
+        position: absolute;
+        right: -180px;
+        bottom: -215px;
+        z-index: -1;
+    }
+    &-top {
+        padding: 50px 0;
+        & h2 {
+            @include font-60;
+            margin-bottom: 32px;
+        }
+    }
+    &-logo {
         max-width: 220px;
         display: inline-block;
     }
-    .footerMenu{
-        li{
+    &-menu {
+        li {
             display: inline-block;
+            & a {
+                display: block;
+                color: rgba($color: $white, $alpha: .60) !important;
+                font-size: 16px;
+                padding: 5px 16px;
+                font-weight: 500;
+                text-transform: uppercase;
+                cursor: pointer;
+                &:hover,
+                &.active,
+                &:focus {
+                    color: $primary !important;
+                }
+            }
         }
     }
-    .footer-social-logos{
-        text-align: end;
-        li{
-            display: inline-block;
-        }
+    &-wrap {
+        border-top: 1px solid rgba($color: $white, $alpha: .10);
+        padding-top: 32px;
+        padding-bottom: 52px;
     }
-
 }
