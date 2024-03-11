@@ -13,8 +13,8 @@ export default function Banner() {
             <Container>
                 <Row className="align-items-center">
                     <Col xs={12} lg={6}>
-                        <div className="banner-wrap">
-                            <h1 className="text-uppercase mb-3 d-flex align-items-center">WHAT IS
+                        <div className="banner-wrap text-center text-lg-start">
+                            <h1 className="text-uppercase mb-3 d-flex align-items-center justify-content-center justify-content-lg-start">WHAT IS
                                 <span>
                                     <span className="m-0">wif</span>
                                 </span>
@@ -23,7 +23,7 @@ export default function Banner() {
                             <a href="#" className="btn text-uppercase">buy $wif</a>
                         </div>
                     </Col>
-                    <Col xs={12} lg={6}>
+                    <Col xs={12} lg={6} className="mt-4 mt-md-5 mt-lg-0">
                         <div className="banner-img rounded">
                             <img src={img} alt="" />
                         </div>

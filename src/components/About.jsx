@@ -20,11 +20,11 @@ export default function About() {
                         <img src={about_img} alt="" />
                     </div>
                 </Col>
-                <Col xs={12} md={6}>
+                <Col xs={12} md={7} lg={6}>
                     <div className="about-wrap">
                         <h3 className="mb-3 mb-md-4">{aboutInfo.title}</h3>
                         {aboutInfo.des.map((des,index) => (
-                            <p key={index} className={index === aboutInfo.des.length - 1 ? '' : 'mb-md-4 mb-lg-5'}>{des}</p>
+                            <p key={index} className={index === aboutInfo.des.length - 1 ? '' : 'mb-3 mb-md-4 mb-lg-5'}>{des}</p>
                         ))}
                     </div>
                 </Col>

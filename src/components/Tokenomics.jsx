@@ -72,7 +72,7 @@ export default function Tokenomics() {
                             </div>
                         ))}
                     </div>
-                    <div className="singleItem d-flex large">
+                    <div className="singleItem d-flex large align-items-center">
                         <h5>{tokenTitle1}</h5>
                         <span>{value2}</span>
                     </div> 

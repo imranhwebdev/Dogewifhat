@@ -32,7 +32,7 @@ export default function Header() {
                                 <Link to="services" spy={true} smooth={true} offset={50} duration={500} >BUY WIF US</Link>
                                 <Link to="contact" spy={true} smooth={true} offset={50} duration={500} >CHART US</Link>
                             </Nav>
-                            <div className="social-icon d-flex align-items-center flex-wrap justify-content-center">
+                            <div className="social-icon mt-4 mt-lg-0 d-flex align-items-center flex-wrap justify-content-center">
                                 <a href="/"><FaPaperPlane /></a>
                                 <a href="/"><FaTwitter /></a>
                             </div>

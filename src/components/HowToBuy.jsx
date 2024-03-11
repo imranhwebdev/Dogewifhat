@@ -39,8 +39,8 @@ export default function HowToBuy() {
                 </Row>
                 <Row className='common-gap'>
                     {features.map((item, index) => (
-                        <Col xs={12} sm={6} key={index}>
-                            <div className="features-item border border-white rounded text-center">
+                        <Col xs={12} sm={6} key={index} className='d-flex'>
+                            <div className="features-item border border-white rounded text-center w-100">
                                 <div className="features-icon mx-auto">
                                     <img src={item.icon} alt="" />
                                 </div>

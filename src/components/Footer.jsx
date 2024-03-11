@@ -27,7 +27,7 @@ export default function Footer() {
                 </Row>
                 <Row>
                     <Col xs={12}>
-                        <div className="footer-wrap d-flex align-items-center gap-4 justify-content-between flex-wrap">
+                        <div className="footer-wrap justify-content-center d-flex align-items-center gap-4 justify-content-lg-between flex-wrap">
                             <a href="/" className='footer-logo'>
                                 <img src={FooterLogo} alt="" />
                             </a>
@@ -45,28 +45,6 @@ export default function Footer() {
                         </div>
                     </Col>
                 </Row>
-                {/* <Row className='footerB align-items-center'>
-                    <Col md={4}>
-                        <a href="/" className='footer-logo'>
-                            <img src={FooterLogo} alt="" />
-                        </a>
-                    </Col>
-                    <Col md={4}>
-                        <ul className='footerMenu text-center'>
-                            <li><a href="/">Dog wif hat</a></li>
-                            <li><a href="/">BUY WIF US</a></li>
-                            <li><a href="/">CHART US</a></li>
-                        </ul>
-                    </Col>
-                    <Col md={4}>
-                        <ul className='footer-social-logos'>
-                            <li><a href="/"> <FaTwitter /> </a></li>
-                            <li><a href="/"> <FaPaperPlane /> </a></li>
-                            <li><a href="/"><img src={icon3} alt="" /></a></li>
-                            <li><a href="/"><img src={icon4} alt="" /></a></li>
-                        </ul>
-                    </Col>
-                </Row> */}
             </Container>
         </footer>
     )

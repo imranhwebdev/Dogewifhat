@@ -4,7 +4,23 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-blend-mode: multiply;
-        padding: var(--padding-y, 210px) 0;
+        padding-top: var(--padding-top, 230px);
+        padding-bottom: var(--padding-bottom, 230px);
+        @include xl {
+            --padding-bottom: 180px;
+        }
+        @include lg {
+            --padding-top: 180px;
+            --padding-bottom: 150px;
+        }
+        @include md {
+            --padding-top: 150px;
+            --padding-bottom: 130px;
+        }
+        @include sm {
+            --padding-top: 130px;
+            --padding-bottom: 80px;
+        }
         &::before {
             --height: 400px;
             content: "";
@@ -88,6 +104,12 @@
             @include font-22;
             margin-bottom: 32px;
             padding-right: 16%;
+            @include mmd {
+                padding-right: 0;
+            }
+            @include sm {
+                margin-bottom: 24px;
+            }
         }
     }
     &-img {
@@ -100,6 +122,11 @@
         cursor: pointer;
         transform: rotate(270deg);
         --bs-text-opacity: .2;
+        @include mmd {
+            left: 50% !important;
+            transform: rotate(270deg) translateY(-50%);
+            margin-left: -70px;
+        }
         &:hover {
             color: $primary !important;
         }

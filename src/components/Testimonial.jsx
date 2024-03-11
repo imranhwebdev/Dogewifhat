@@ -17,7 +17,7 @@ export default function Testimonial() {
         },
         {
             img:tImg1,
-            title:"They took a dog and put a hat on",
+            title:"They <span>took a dog</span> and put a hat on",
             desc: 'The psychology awareness initiative gives me maximum flexibility and discover my own secret hidden confidence.',
             radingLogo: <FaStar />,
             count: 4.5,

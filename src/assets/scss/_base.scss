@@ -141,6 +141,12 @@ input::-webkit-inner-spin-button {
     &-title {
         --margin-bottom: 80px;
         margin-bottom: var(--margin-bottom);
+        @include md {
+            --margin-bottom: 60px;
+        }
+        @include sm {
+            --margin-bottom: 40px;
+        }
         & h2 {
             @include font-60;
         }

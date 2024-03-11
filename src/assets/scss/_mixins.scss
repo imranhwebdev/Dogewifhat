@@ -125,11 +125,14 @@
 @mixin font-34 {
     font-size: 34px;
     line-height: 160%;
+    @include lg {
+        font-size: 28px;
+    }
     @include md {
-        font-size: 30px;
+        font-size: 24px;
     }
     @include sm {
-        font-size: 22px;
+        font-size: 20px;
     }
 }
 
@@ -148,13 +151,13 @@
     font-size: 24px;
     line-height: 160%;
     @include lg {
-        font-size: 22px;
-    }
-    @include md {
         font-size: 20px;
     }
-    @include sm {
+    @include md {
         font-size: 18px;
+    }
+    @include sm {
+        font-size: 16px;
     }
 }
 
