@@ -20,7 +20,7 @@ export default function About() {
                         <img src={about_img} alt="" />
                     </div>
                 </Col>
-                <Col xs={12} md={7}>
+                <Col xs={12} md={6}>
                     <div className="about-wrap">
                         <h3 className="mb-3 mb-md-4">{aboutInfo.title}</h3>
                         {aboutInfo.des.map((des,index) => (

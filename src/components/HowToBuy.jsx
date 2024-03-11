@@ -40,13 +40,15 @@ export default function HowToBuy() {
                 <Row className='common-gap'>
                     {features.map((item, index) => (
                         <Col xs={12} sm={6} key={index}>
-                            <div className="features-item text-center">
-                                <div className="features-icon">
+                            <div className="features-item border border-white rounded text-center">
+                                <div className="features-icon mx-auto">
                                     <img src={item.icon} alt="" />
                                 </div>
-                                <h4 className="pb-3 mb-3 pb-md-4 mb-md-4">{item.title}</h4>
-                                <p className='mb-3 mb-md-4'>{item.des}</p>
-                                <span className='fw-semibold'>{index <= 9 ? '0' : ''}{index + 1}</span>
+                                <div className="features-content">
+                                    <h4 className="pb-3 mb-3 pb-md-4 mb-md-4 border-bottom border-white text-uppercase">{item.title}</h4>
+                                    <p className='mb-3 mb-md-4 text-white'>{item.des}</p>
+                                    <span className='fw-semibold text-white'>{index <= 9 ? '0' : ''}{index + 1}</span>
+                                </div>
                             </div>
                         </Col>
                     ))}
