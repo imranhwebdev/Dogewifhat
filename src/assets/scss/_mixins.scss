@@ -45,26 +45,23 @@
     right: 0;
 }
 
-@mixin font-90 {
-    font-size: 90px;
-    line-height: 1.4;
-    @include xxl {
-        font-size: 80px;
-    }
+@mixin font-80 {
+    font-size: 80px;
+    line-height: calc(99px / 80px);
     @include xl {
-        font-size: 70px;
+        font-size: 64px;
     }
     @include lg {
-        font-size: 65px;
+        font-size: 54px;
     }
     @include md {
-        font-size: 55px;
+        font-size: 44px;
     }
     @include sm {
-        font-size: 50px;
+        font-size: 38px;
     }
     @include xsm {
-        font-size: 45px;
+        font-size: 30px;
     }
 }
 
@@ -105,14 +102,14 @@
     }
 }
 
-@mixin font-35 {
-    font-size: 35px;
+@mixin font-34 {
+    font-size: 34px;
     line-height: 160%;
     @include md {
         font-size: 30px;
     }
     @include sm {
-        font-size: 25px;
+        font-size: 22px;
     }
 }
 

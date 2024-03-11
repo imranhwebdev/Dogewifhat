@@ -1,0 +1,8 @@
+.banner {
+    &-area {
+        background-image: url(../img/banner-bg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-blend-mode: multiply;
+    }
+}
