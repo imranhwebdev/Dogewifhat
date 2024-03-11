@@ -1,0 +1,146 @@
+.tokenomicsArea {
+    position: relative;
+    z-index: 1;
+    &::before {
+        --width: 716px;
+        position: absolute;
+        content: "";
+        left: -20%;
+        top: -20%;
+        width: var(--width);
+        height: var(--width);
+        border-radius: 100%;
+        background-color: $primary;
+        opacity: .2;
+        z-index: -1;
+    }
+    .tokenDetails {
+        h5 {
+            color: $primary;
+            @include font-18;
+            text-transform: capitalize;
+            font-weight: 400;
+            margin-bottom: 0;
+            @include sm {
+                font-size: 14px;
+            }
+        }
+        figure {
+            max-width: 39px;
+        }
+        span {
+            @include font-24;
+            font-weight: 400;
+            color: $white;
+            @include sm {
+                font-size: 16px;
+            }
+        }
+        .singleItem-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            column-gap: 32px;
+            @include ssm {
+                grid-template-columns: 1fr
+            }
+            .singleItem:last-child {
+                display: flex;
+                align-items: center;
+                p {
+                    max-width: 271px;
+                    margin: 0 auto;
+                    color: $white;
+                    @include font-18;
+                    font-weight: 400;
+                    line-height: 150%;
+                }
+            }
+        }
+        .singleItem {
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            background: rgba(255, 255, 255, 0.04);
+            padding: 32px;
+            margin-bottom: 32px;
+            border-radius: 10px;
+            @include sm {
+                padding: 20px;
+            }
+            & .singleItemContent {
+                .top {
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+                    padding-bottom: 22px;
+                    @include sm {
+                        padding-bottom: 18px;
+                    }
+                }
+                .bottom {
+                    padding-top: 34px;
+                    @include sm {
+                        padding-top: 18px;
+                    }
+                }
+            }
+        }
+        .singleItem.large {
+            h5 {
+                position: relative;
+                z-index: 1;
+                padding-right: 46px;
+                margin-right: 46px;
+                min-width: 205px;
+                @include mmd {
+                    min-width: max-content;
+                }
+                @include sm {
+                    padding-right: 20px;
+                    margin-right: 20px;
+                }
+                &::after {
+                    position: absolute;
+                    content: "";
+                    top: 50%;
+                    right: 0;
+                    width: 1px;
+                    height: 24px;
+                    background: rgba(255, 255, 255, 0.10);
+                    transform: translateY(-50%);
+                }
+            }
+        }
+        .tokenomics_copyTxt {
+            position: relative;
+            flex-grow: 1;
+            input {
+                background: transparent;
+                width: 95%;
+                border: 0;
+                @include font-24;
+                color: $white;
+                line-height: 150%;
+                padding: 0;
+                @include sm {
+                    font-size: 14px;
+                }
+            }
+            button {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background: #0C0D1E;
+                padding: 0;
+                border: 0;
+                &:hover {
+                    opacity: .5;
+                }
+                img {
+                    max-width: 32px;
+                    @include sm {
+                        max-width: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

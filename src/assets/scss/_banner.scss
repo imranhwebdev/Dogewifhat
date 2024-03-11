@@ -18,6 +18,20 @@
             border-radius: 100%;
             filter: blur(250px);
         }
+        &::after {
+            --width: 716px;
+            content: "";
+            width: var(--width);
+            height: var(--width);
+            border-radius: 100%;
+            background-color: $primary;
+            opacity: .2;
+            position: absolute;
+            right: -10%;
+            top: 70%;
+            filter: blur(250px);
+            z-index: -1;
+        }
     }
     &-wrap {
         & h1 {

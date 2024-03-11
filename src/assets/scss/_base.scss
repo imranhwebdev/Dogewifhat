@@ -75,6 +75,10 @@ nav ul li {
     @include transition;
 }
 
+figure {
+    margin: 0;
+}
+
 
 /*Hide number spin button*/
 
@@ -152,4 +156,27 @@ input::-webkit-inner-spin-button {
 
 #root {
     overflow: hidden;
+}
+
+.backTop {
+    --width: 40px;
+    @include flex;
+    width: var(--width);
+    height: var(--width);
+    border-radius: 6px;
+    position: fixed;
+    bottom: 50%;
+    right: 20px;
+    background-color: $primary;
+    color: $white;
+    border: 1px solid $primary;
+    justify-content: center;
+    z-index: 9;
+    &:hover {
+        background-color: transparent;
+        color: $primary;
+    }
+    &.show {
+        bottom: 20px;
+    }
 }

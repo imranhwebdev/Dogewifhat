@@ -12,7 +12,7 @@ export default function About() {
         ]
     }
   return (
-    <div className="about common-padding" id="about">
+    <div className="about common-padding position-relative z-1" id="about">
         <Container>
             <Row className="align-items-center">
                 <Col xs={12} md={5} className="text-end">
