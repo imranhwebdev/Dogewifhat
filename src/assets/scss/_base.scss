@@ -41,7 +41,7 @@ p {
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -84,61 +84,12 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
-.container {
-    max-width: 1290px;
-}
-
-.base {
-    &-btn {
-        display: inline-block;
-        border: 1px solid $primary;
-        border-radius: 5px;
-        padding: 23px 48px;
-        @include font-18;
-        @include sm {
-            font-size: 18px;
-        }
-        &:hover {
-            background-color: transparent;
-            color: $primary;
-        }
-        &.bg-transparent {
-            color: $primary;
-            &:hover {
-                background-color: $primary !important;
-            }
-        }
-    }
-    &-padding {
-        padding-top: 200px;
-        @include sm {
-            padding-top: 100px;
-        }
-    }
-    &-title {
-        & h2 {
-            @include font-43;
-            margin-bottom: 26px;
-            line-height: 130%;
-        }
-        & p {
-            @include font-18;
-        }
-    }
-}
-
-.-mb {
-    &-30 {
-        margin-bottom: -30px;
-    }
-}
-
 .btn {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     @include font-20;
-    color: $secondary;
+    --bs-btn-color: #9B3D1F;
     --primary-color: #F9C36A;
     --bs-btn-font-weight: 600;
     --bs-btn-padding-x: 70px;
@@ -152,10 +103,6 @@ input::-webkit-inner-spin-button {
     &:hover {
         color: $primary;
     }
-}
-
-sub {
-    bottom: 0;
 }
 
 .social {
@@ -177,6 +124,28 @@ sub {
             &:hover {
                 color: $white;
             }
+        }
+    }
+}
+
+// common
+.common {
+    &-padding {
+        padding-top: var(--padding-top, 80px);
+        padding-bottom: var(--padding-bottom, 80px);
+    }
+    &-title {
+        --margin-bottom: 80px;
+        margin-bottom: var(--margin-bottom);
+        & h2 {
+            @include font-60;
+        }
+    }
+    &-gap {
+        --bs-gutter-x: 32px;
+        margin-bottom: calc(var(--bs-gutter-x) * -1);
+        &>* {
+            margin-bottom: var(--bs-gutter-x);
         }
     }
 }

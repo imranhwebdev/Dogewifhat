@@ -1,42 +1,35 @@
-import {React} from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
-import { FaTwitter, FaPaperPlane, FaMediumM  } from "react-icons/fa";
-import bannerImg from '../assets/img/hero.png'
-import herosociallogo1 from '../assets/img/hero-social-logo-1.svg'
-export default function About(){
-    return(
-        <div className="banner" id='about'>
-            <div className="banner-wrapper">
-                <Container>
-                    <Row className='align-items-center'>
-                        <Col lg={7} className="order-2 order-lg-1">
-                            <div className="banner-content">
-                                <span className='text-primary d-block text-uppercase fw-bold'>This means of course </span>
-                                <h1 className='text-white'>About</h1>
-                                <p>This means of course that we are setting a few “rules” for Phase 1 of Osaka Protocol (Phase 2 to be revealed shortly) , which emulate the original rules of Shiba Inu.</p>
-                                <div className="btn-with-social">
-                                    <a href="#" className="base-btn">Buy on Uniswap</a>
-                                    <div className="social-links">
-                                        <ul>
-                                            <li><a href="/"><FaTwitter /></a></li>
-                                            <li><a href="/"><FaPaperPlane /></a></li>
-                                            <li><a href="/"><FaMediumM /></a></li>
-                                            <li><a href="/"><img src={herosociallogo1} alt="" /></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </Col>
-                        <Col lg={5} className='text-end order-1 order-lg-2'>
-                            <div className="banner-img">
-                                <firure className="banner-right-img">
-                                    <img src={bannerImg} alt="" />
-                                </firure>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
-        </div>
-    )
+import { Container, Row, Col } from "react-bootstrap";
+import about_img from '../assets/img/about-img.png';
+
+
+export default function About() {
+    const aboutInfo = {
+        title:'About wif?',
+        des:[
+            `Discover Dogwifhat 2, the fan tribute to the iconic Dogwifhat meme coin. As a continuation of the original's legacy, Dogwifhat 2 combines the joy of meme culture with the excitement of cryptocurrency.`,
+            `It's not just a coin; it's a celebration of community, designed for and by fans. Join us in shaping the future of this playful token. Embrace the spirit of the crypto community and be part of the next big meme coin movement.`,
+            `Get your Dogwifhat 2 today and let's make history together!`,
+        ]
+    }
+  return (
+    <div className="about common-padding">
+        <Container>
+            <Row className="align-items-center">
+                <Col xs={12} md={5} className="text-end">
+                    <div className="about-img rounded ms-auto">
+                        <img src={about_img} alt="" />
+                    </div>
+                </Col>
+                <Col xs={12} md={7}>
+                    <div className="about-wrap">
+                        <h3 className="mb-3 mb-md-4">{aboutInfo.title}</h3>
+                        {aboutInfo.des.map((des,index) => (
+                            <p key={index} className={index === aboutInfo.des.length - 1 ? '' : 'mb-md-4 mb-lg-5'}>{des}</p>
+                        ))}
+                    </div>
+                </Col>
+            </Row>
+        </Container>
+    </div>
+  )
 }
