@@ -75,7 +75,9 @@ nav ul li {
     @include transition;
 }
 
-
+figure{
+    margin: 0;
+}
 /*Hide number spin button*/
 
 input::-webkit-outer-spin-button,
