@@ -1,42 +1,30 @@
-import {React} from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
-import { FaMediumM, FaTwitter, FaPaperPlane} from "react-icons/fa";
-import bannerImg from '../assets/img/hero.png'
-import herosociallogo1 from '../assets/img/hero-social-logo-1.svg'
-export default function Banner(){
-    return(
-        <div className="banner">
-            <div className="banner-wrapper">
-                <Container>
-                    <Row className='align-items-center'>
-                        <Col lg={7} className="order-2 order-lg-1">
-                            <div className="banner-content">
-                                <span className='text-primary d-block text-uppercase fw-bold'>This means of course </span>
-                                <h1 className='text-white'>O<sub>saka protocol</sub></h1>
-                                <p>This means of course that we are setting a few “rules” for Phase 1 of Osaka Protocol (Phase 2 to be revealed shortly) , which emulate the original rules of Shiba Inu.</p>
-                                <div className="btn-with-social">
-                                    <a href="#" className="base-btn">Buy on Uniswap</a>
-                                    <div className="social-links">
-                                        <ul>
-                                            <li><a href="/"><FaTwitter /></a></li>
-                                            <li><a href="/"><FaPaperPlane /></a></li>
-                                            <li><a href="/"><FaMediumM /></a></li>
-                                            <li><a href="/"><img src={herosociallogo1} alt="" /></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </Col>
-                        <Col lg={5} className='text-end order-1 order-lg-2'>
-                            <div className="banner-img">
-                                <firure className="banner-right-img">
-                                    <img src={bannerImg} alt="" />
-                                </firure>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
+import { Container, Row, Col } from "react-bootstrap";
+import img from '../assets/img/banner-img.png'
+export default function Banner() {
+    return (
+        <div className="banner-area">
+            <Container className="position-relative z-1">
+                <div className="banner-scroll text-uppercase position-absolute top-100 start-0">
+                    <svg width="42" height="25" viewBox="0 0 42 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.0699 18.5697L3.99995 12.4997L10.0699 6.42969" stroke="#353544" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M41 12.5L4.17 12.5" stroke="#353544" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg> scroll down
+                </div>
+                <Row className="align-items-center">
+                    <Col xs={12} lg={6}>
+                        <div className="banner-wrap">
+                            <h1 className="text-uppercase mb-3">WHAT IS <span>wif</span></h1>
+                            <p>WIF, more than just a whimsical image of a dog donning a hat, embodies a paradigm shift in the landscape of finance and technology. </p>
+                            <a href="#" className="btn text-uppercase">buy $wif</a>
+                        </div>
+                    </Col>
+                    <Col xs={12} lg={6}>
+                        <div className="banner-img">
+                            <img src={img} alt="" />
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
         </div>
     )
 }
