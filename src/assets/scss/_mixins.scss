@@ -65,6 +65,26 @@
     }
 }
 
+@mixin font-70 {
+    font-size: 70px;
+    line-height: calc(88px / 70px);
+    @include xl {
+        font-size: 60px;
+    }
+    @include lg {
+        font-size: 50px;
+    }
+    @include md {
+        font-size: 40px;
+    }
+    @include sm {
+        font-size: 34px;
+    }
+    @include xsm {
+        font-size: 26px;
+    }
+}
+
 @mixin font-60 {
     font-size: 60px;
     line-height: calc(74px/60px);

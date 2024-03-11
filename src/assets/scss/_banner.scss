@@ -4,5 +4,106 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-blend-mode: multiply;
+        padding: var(--padding-y, 210px) 0;
+        &::before {
+            --height: 400px;
+            content: "";
+            width: 100%;
+            height: var(--height);
+            background-color: rgba($color: $primary, $alpha: .40);
+            position: absolute;
+            top: calc(var(--height) / 2 * -1);
+            right: -40%;
+            z-index: -1;
+            border-radius: 100%;
+            filter: blur(250px);
+        }
+    }
+    &-wrap {
+        & h1 {
+            @include font-70;
+            &>span {
+                &::before {
+                    content: "";
+                    width: var(--shape);
+                    height: calc(var(--shape) / 2);
+                    background-color: rgba($color: $primary, $alpha: .20);
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    filter: blur(43px);
+                }
+                &::after {
+                    content: url("data:image/svg+xml;charset=UTF-8,%3csvg width='197' height='73' viewBox='0 0 197 73' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M185.851 5.13088C191.862 3.23639 196.665 1.52342 196.523 0.99364C196.381 0.463857 191.297 1.35294 185.175 3.27734C181.414 4.45439 177.709 5.78681 174.075 7.26897C171.822 8.0216 169.707 9.08523 167.83 10.4092C170.151 10.0343 172.439 9.42126 174.637 8.58523L185.829 5.16044' fill='%23FAC26B' fill-opacity='0.6'/%3e%3cpath d='M185.851 67.7388C191.862 69.6332 196.665 71.3462 196.523 71.876C196.381 72.4058 191.297 71.5167 185.175 69.5923C181.414 68.4152 177.709 67.0828 174.075 65.6007C171.822 64.848 169.707 63.7844 167.83 62.4604C170.151 62.8354 172.439 63.4484 174.637 64.2844L185.829 67.7092' fill='%23FAC26B' fill-opacity='0.6'/%3e%3cpath d='M11.6099 5.13088C5.59914 3.23639 0.795565 1.52342 0.93752 0.99364C1.07947 0.463857 6.1636 1.35294 12.286 3.27734C16.0469 4.45439 19.7522 5.78681 23.3861 7.26897C25.6386 8.0216 27.7539 9.08523 29.6312 10.4092C27.3097 10.0343 25.022 9.42126 22.8241 8.58523L11.6319 5.16044' fill='%23FAC26B' fill-opacity='0.6'/%3e%3cpath d='M11.6099 67.7388C5.59914 69.6332 0.795565 71.3462 0.93752 71.876C1.07947 72.4058 6.1636 71.5167 12.286 69.5923C16.0469 68.4152 19.7522 67.0828 23.3861 65.6007C25.6386 64.848 27.7539 63.7844 29.6312 62.4604C27.3097 62.8354 25.022 63.4484 22.8241 64.2844L11.6319 67.7092' fill='%23FAC26B' fill-opacity='0.6'/%3e%3c/svg%3e ");
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    margin-top: 10px;
+                }
+            }
+            & span {
+                position: relative;
+                display: inline-flex;
+                margin-left: 32px;
+                --shape: 140px;
+                & span {
+                    padding: 5px 25px;
+                    background-color: $primary;
+                    color: #87220E;
+                    border-radius: 100px;
+                    font-size: 36px;
+                    line-height: calc(43px/36px);
+                    &::before {
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        background-color: #87220E;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%) rotate(4deg);
+                        z-index: -1;
+                        border-radius: 100px;
+                    }
+                }
+            }
+        }
+        & p {
+            @include font-22;
+            margin-bottom: 32px;
+            padding-right: 16%;
+        }
+    }
+    &-img {
+        width: 100%;
+        padding-bottom: 59%;
+        --bs-border-radius: 24px;
+        @include img(cover);
+    }
+    &-scroll {
+        cursor: pointer;
+        transform: rotate(270deg);
+        --bs-text-opacity: .2;
+        &:hover {
+            color: $primary !important;
+        }
+        & svg {
+            position: relative;
+            z-index: 1;
+            animation: wheel 2s infinite ease-in-out;
+        }
+    }
+}
+
+@keyframes wheel {
+    0% {
+        opacity: 1;
+        left: 0;
+    }
+    100% {
+        opacity: 0;
+        left: -30px;
     }
 }
