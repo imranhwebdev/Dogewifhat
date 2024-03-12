@@ -8,8 +8,11 @@
     z-index: 9;
     @include mmd {
         .navbar-toggler {
-            background: #fff;
+            background-color: #19151C;
             padding: 6px;
+            &>* {
+                filter: invert(1);
+            }
         }
         .navbar-collapse {
             background: $black;
