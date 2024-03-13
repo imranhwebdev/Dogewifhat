@@ -15,13 +15,13 @@ export default function Testimonial() {
             radingLogo: <FaStar />,
             count: 4.5,
         },
-        {
-            img:tImg1,
-            title:"They <span>took a dog</span> and put a hat on",
-            desc: 'The psychology awareness initiative gives me maximum flexibility and discover my own secret hidden confidence.',
-            radingLogo: <FaStar />,
-            count: 4.5,
-        },
+        // {
+        //     img:tImg1,
+        //     title:"They <span>took a dog</span> and put a hat on",
+        //     desc: 'The psychology awareness initiative gives me maximum flexibility and discover my own secret hidden confidence.',
+        //     radingLogo: <FaStar />,
+        //     count: 4.5,
+        // },
     ]
   return (
     <section className='testimonial'>

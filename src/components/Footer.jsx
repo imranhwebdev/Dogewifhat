@@ -5,8 +5,8 @@ import { FaTwitter, FaPaperPlane } from "react-icons/fa";
 
 export default function Footer() {
     const fTitle = "Never miss a drop!";
-    const btnTxt = "Join our DISCORD";
-    const btnLink = "https://google.com";
+    const btnTxt = "Join our TELEGRAM";
+    const btnLink = "https://t.me/dogwifhat2sol";
     const icon_3 = `<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M16.973 2H8.59296C4.95296 2 2.78296 4.17 2.78296 7.81V16.18C2.78296 19.83 4.95296 22 8.59296 22H16.963C20.603 22 22.773 19.83 22.773 16.19V7.81C22.783 4.17 20.613 2 16.973 2ZM9.89296 16.9C9.89296 17.18 9.67296 17.4 9.39296 17.4H6.60296C6.32296 17.4 6.10296 17.18 6.10296 16.9V12.28C6.10296 11.65 6.61296 11.14 7.24296 11.14H9.39296C9.67296 11.14 9.89296 11.36 9.89296 11.64V16.9ZM14.673 16.9C14.673 17.18 14.453 17.4 14.173 17.4H11.383C11.103 17.4 10.883 17.18 10.883 16.9V7.74C10.883 7.11 11.393 6.6 12.023 6.6H13.543C14.173 6.6 14.683 7.11 14.683 7.74V16.9H14.673ZM19.463 16.9C19.463 17.18 19.243 17.4 18.963 17.4H16.173C15.893 17.4 15.673 17.18 15.673 16.9V13.35C15.673 13.07 15.893 12.85 16.173 12.85H18.323C18.953 12.85 19.463 13.36 19.463 13.99V16.9Z" fill="currentColor"/>
                     </svg>`;
@@ -21,7 +21,7 @@ export default function Footer() {
                     <Col className='text-center'>
                         <div className='footer-top'>
                             <h2 className='text-uppercase'>{fTitle}</h2>
-                            <a href={btnLink} className='btn text-uppercase'>{btnTxt}</a>
+                            <a href={btnLink} target='_blank' className='btn text-uppercase'>{btnTxt}</a>
                         </div>
                     </Col>
                 </Row>
@@ -37,10 +37,9 @@ export default function Footer() {
                                 <li><a href="/">CHART US</a></li>
                             </ul>
                             <ul className='social-icon d-flex align-items-center justify-content-center'>
-                                <li><a href="/"> <FaTwitter /> </a></li>
-                                <li><a href="/"> <FaPaperPlane /> </a></li>
+                                <a href="https://t.me/dogwifhat2sol" target='_blank'><FaPaperPlane /></a>
+                                <a href="https://twitter.com/wifonsol2" target='_blank'><FaTwitter /></a>
                                 <li><a href="/" dangerouslySetInnerHTML={{ __html: icon_3 }}></a></li>
-                                <li><a href="/" dangerouslySetInnerHTML={{ __html: icon_4 }}></a></li>
                             </ul>
                         </div>
                     </Col>

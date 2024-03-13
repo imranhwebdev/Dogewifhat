@@ -16,7 +16,7 @@ export default function HowToBuy() {
         {
             icon: icon_2,
             title: 'Get Some SOL',
-            des: `Have SOL in your wallet to switch to $SOLAMA. If you don't have any SOL you can buy SOL from an exchange or cross chain`,
+            des: `Have SOL in your wallet to switch to $WIF2.0. If you don't have any SOL you can buy SOL from an exchange or cross chain`,
         },
         {
             icon: icon_3,
@@ -26,7 +26,7 @@ export default function HowToBuy() {
         {
             icon: icon_4,
             title: 'Switch SOL for WIF 2.0',
-            des: `Switch SOL for SSOLAMA. we have ZERO taxes so you don't need to worry about buying with a specific slippage`,
+            des: `Switch SOL for $WIF2.0. we have ZERO taxes so you don't need to worry about buying with a specific slippage`,
         },
     ]
     return (

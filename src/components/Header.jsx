@@ -33,8 +33,8 @@ export default function Header() {
                                 <Link to="contact" spy={true} smooth={true} offset={50} duration={500} >CHART US</Link>
                             </Nav>
                             <div className="social-icon mt-4 mt-lg-0 d-flex align-items-center flex-wrap justify-content-center">
-                                <a href="/"><FaPaperPlane /></a>
-                                <a href="/"><FaTwitter /></a>
+                                <a href="https://t.me/dogwifhat2sol" target='_blank'><FaPaperPlane /></a>
+                                <a href="https://twitter.com/wifonsol2" target='_blank'><FaTwitter /></a>
                             </div>
                         </Navbar.Collapse>
                     </Container>
