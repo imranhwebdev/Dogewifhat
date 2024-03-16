@@ -6,7 +6,7 @@ import documentCopy from '../assets/img/document-copy.svg';
 import { FaClipboardCheck  } from "react-icons/fa";
 import CommonTitle from './CommonTitle';
 export default function Tokenomics() {
-    const [textToCopy, setTextToCopy] = useState('0x865331a601F129540b6F70a9fCA2Ba9Dd71de298');
+    const [textToCopy, setTextToCopy] = useState('64ugE6vzFQBhAuk91GLCALTGErax2NcGZL4UX1Atj5fS');
     const [isCopied, setIsCopied] = useState(false);
     const handleCopyToClipboard = () => {
         navigator.clipboard.writeText(textToCopy)
@@ -25,21 +25,21 @@ export default function Tokenomics() {
         {
             title: "Total Supply",
             logo: tokenLogo1,
-            value: "676,602,254",
+            value: "10,000,000,000",
         },
         {
             title: "Symbol",
             logo: tokenLogo2,
-            value: "$SOLAMA",
+            value: "$WIF2.0",
         },
         {
             desc: "LP Tokens are burnt, and contract ownership is renounced."
         },
     ];
 
-    const tokenTitle1 = "Total Name";
+    const tokenTitle1 = "Token name";
     const tokenTitle2 = "Token Address";
-    const value2 = "PHONKE FORK";
+    const value2 = "Dogwifhat2.0";
   return (
     <section className='tokenomicsArea'>
       <Container>
